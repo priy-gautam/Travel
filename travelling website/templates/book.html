@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now | Travellel</title>
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">Travel</div>
+    <ul class="nav-links">
+      <li><a href="./">Home</a></li>
+      <li><a href="./about">About</a></li>
+      <li><a href="./destination">Destinations</a></li>
+      <li><a href="./tour">Tours</a></li>
+      <li><a href="./contact">Contact</a></li>
+    </ul>
+    <a href="./book" class="nav-btn">Book Now</a>
+  </nav>
+
+  <!-- Book Now Section -->
+  <section class="booking-section">
+    <h1>Book Your Adventure</h1>
+    <p>Fill out the form below and we'll start planning your perfect trip!</p>
+
+    <form class="booking-form" action="/book" method="POST" enctype="multipart/form-data">
+
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
+
+      <label for="destination">Choose Destination *</label>
+      <select id="destination" name="destination" required>
+        <option value="">Select a destination</option>
+        <option value="Ladakh">Ladakh</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Goa">Goa</option>
+        <option value="Rajasthan">Rajasthan</option>
+      </select>
+
+      <label for="date">Preferred Travel Date *</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any preferences or questions?"></textarea>
+
+      <!-- Payment Section -->
+      <div class="payment-section">
+        <h3>Make a Payment</h3>
+        <p>Scan the code to confirm your booking via UPI or any mobile wallet:</p>
+        <img src="../static/images/scanner.jpg" alt="UPI QR Code" class="payment-qr" />
+        <p><strong>UPI ID:</strong> travellel@upi.com</p>
+
+        <label for="payment-proof">Upload Payment Screenshot *</label>
+        <input type="file" id="payment-proof" name="payment-proof" accept="image/*,application/pdf" required />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <h3>Travellel</h3>
+      <p>Discover India with curated experiences that stay with you forever.</p>
+      <ul class="footer-nav">
+        <li><a href="./">Home</a></li>
+        <li><a href="./tour">Tours</a></li>
+        <li><a href="./contact">Contact</a></li>
+        <li><a href="./about">About</a></li>
+        <li><a href="./destination">Destinations</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="#" title="Facebook">🌐</a>
+        <a href="#" title="Instagram">📸</a>
+        <a href="#" title="Twitter">🐦</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Travellel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
