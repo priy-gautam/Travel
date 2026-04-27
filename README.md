@@ -4,7 +4,7 @@ A dynamic travel website built using **Python Flask, HTML, and CSS** that allows
 
 ---
 
-## 🚀 Features
+##  Features
 
 *  Explore different travel destinations
 *  Detailed information about places
